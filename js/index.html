@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script type="text/javascript" src="js2/BLBUIcc.min.js"></script>
+    <script type="text/javascript">
+        BLBUI.action(function () { });
+            alert("my");
+        var k = BLBUI.createElement('v00', '1000px', '500px', BLBUI.color.green00, BLBUI.color.red, '', 100, false);
+       
+            BLBUI.setWindow(k);
+
+            var k1 = BLBUI.createElement('v01', '1000px', '50px', BLBUI.color.green00, BLBUI.color.red, '', 100, false);
+            BLBUI.add('v00',k1);
+
+            var k2 = BLBUI.createElement('v02', '1000px', '400px', BLBUI.color.gray01, BLBUI.color.red, '', 100, false);
+            BLBUI.add('v00', k2);
+
+            var list = new Array();
+            list[0] = BLBUI.createElement('v1', '80px', '35px', BLBUI.color.purple00, BLBUI.color.red, 'https://www.baidu.com/img/baidu_jgylogo3.gif', '5px', false);
+            list[1] = BLBUI.createElement('v2', '80px', '35px', BLBUI.color.blue00, BLBUI.color.red, '', 0, false);
+            list[2] = BLBUI.createElement('v3', '80px', '35px', BLBUI.color.yellow00, BLBUI.color.red, '', 3, false);
+            list[3] = BLBUI.createElement('v4', '80px', '35px', BLBUI.color.blue00, BLBUI.color.red, '', 0, false);
+            list[4] = BLBUI.createElement('v5', '80px', '35px', BLBUI.color.yellow00, BLBUI.color.red, '', 3, false);
+
+
+            BLBUI.setLayout(1, 'v01', list);
+            var list2 = new Array();
+            list2[0] = BLBUI.createElement('v12', '800px', '100px', BLBUI.color.purple00, BLBUI.color.red, '', '20px', true, '');
+            list2[1] = BLBUI.createElement('v22', '800px', '100px', BLBUI.color.blue00, BLBUI.color.red, '', '30px', true, '');
+
+
+
+
+            BLBUI.setLayout(1, 'v02', list2);
+            BLBUI.tool.setCenter('v00', true, true);
+            alert(BLBUI.tool.getTagValue('v12'));
+
+            BLBUI.click('v12', 'http://www.baidu.com');
+
+            BLBUI.wAjax('v22', '/MyUI/Default.aspx', '["name":"w"]', function (get) {
+                alert(get);
+            });
+     
+       
+        
+    </script>
+</head>
+<body style="font-family:'Microsoft YaHei';padding:50px">
+    
+    <h2><u>UI框架_百联百</u></h2>
+    <h3>1.概述</h3>
+    <div>
+        可以快速制作UI
+    </div>
+
+    <h3>2.详解</h3>
+    <h5>BLBUI对象</h5>
+    <div>
+        2.1 BLBUI.action 立即加载函数 <br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                BLBUI.action(function () {<br />
+                    //你的代码<br />
+                 });
+            </span><br />
+        2.2 BLBUI.color 颜色值<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                    BLBUI.color.red;  //你的颜色
+            </span><br />
+        2.3 BLBUI.createElemen(tagId, width, height, color,fontColor,backimg, padding, edit, radius) 创建元件<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                var k1 = BLBUI.createElement('v01', '1000px', '50px', BLBUI.color.green00, BLBUI.color.red, '', 100, false);  
+            </span><br />
+        2.4 BLBUI.setWindow(tagId) 设置显示窗口<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                BLBUI.setWindow(k);     //k为2.3创建的元件
+            </span><br />
+        2.5 BLBUI.add(tagId, child) 添加元件<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                BLBUI.add('v00',k1);    //v00为tagId的名称类型字符串，k1为元件如k
+            </span><br />
+        2.6 BLBUI.setLayout(type,tagId, list) 设置布局<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                BLBUI.setLayout(1, 'v01', list);  //type为1是横向2为纵向布局，v01为tagId的名称类型字符串，list为元件数组array类型的k
+            </span><br />
+        2.7 BLBUI.click(tagId, openUrl) 点击事件<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                BLBUI.click('v12', 'http://www.baidu.com'); //v12为tagId的名称类型字符串，openUrl为点击打开url网页
+                 });
+            </span><br />
+        2.8 BLBUI.wAjax(tagid, url, data, callback) ajax事件<br />
+            <span style="background-color:#000000;color:#e9dfdf;padding-left:30px;">
+                BLBUI.wAjax('v30', '/BLBUI/Default.aspx', '["name":"w"]', function (get) {<br />
+                    //你的代码<br />
+                    alert(get);<br />
+                });//v30为tagId的名称类型字符串，url为请求ajax处理的后台url地址,data为传值数据可为json，callback为回调函数
+            </span><br />
+    </div>
+        
+</body>
+</html>
