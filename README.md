@@ -5,6 +5,8 @@ UI框架_百联百
 1.概述
 可以快速制作UI js下载 :BLBUI.min.js 
 
+<img src="https://github.com/wyzProgram/BLBUI/blob/master/show.PNG">
+
 2.详解
 BLBUI对象
 
@@ -72,39 +74,39 @@ BLBUI.delWindow(k10);
 BLBUI.del('v00', k001);
 //v00为tagId的名称类型字符串返回值，k001要删除的元件 
 
-3.实例
-点击链接下载查看代码效果：testUI
-BLBUI.action(function () 
-{ 
-    //你的代码 
-        var k00 = BLBUI.createElement('v00', '1000px', '700px', BLBUI.color.gray01, 'black', '', '10px', false, '5px'); 
-        BLBUI.setWindow(k00); //1.设置窗口 
-        BLBUI.tool.setCenter('v00', true, false); 
-        //2二级视图 
-        var k01 = BLBUI.createElement('v01', '95%', '30px', BLBUI.color.purple,'white', '', '30px', false, '5px'); 
-        BLBUI.add('v00',k01); 
-        var k02 = BLBUI.createElement('v02', '95%', '300px', BLBUI.color.yellow, 'white', '', '30px',true, '5px'); 
-        BLBUI.add('v00', k02); 
-        BLBUI.tool.setTagValue('v02','input...'); 
-        var k03 = BLBUI.createElement('v03', '95%', '30px', BLBUI.color.purple, 'white', '', '30px', false, '5px'); 
-        BLBUI.add('v00',k03); 
-        //3三级视图 
-        var arr = new Array(); arr[0] = BLBUI.createElement('v001', '16%', '25px', BLBUI.color.blue, 'white', '', '10px', false, '5px'); 
-        arr[1] = BLBUI.createElement('v002', '26%', '25px', BLBUI.color.gray02, 'black', '', '10px', true, '5px'); 
-        arr[2] = BLBUI.createElement('v003', '2%', '25px', BLBUI.color.purple, 'white', '', '0px', false, '0px'); 
-        arr[3] = BLBUI.createElement('v004', '16%', '25px', BLBUI.color.blue, 'white', '', '10px', false, '5px'); 
-        arr[4] = BLBUI.createElement('v005', '26%', '25px', BLBUI.color.gray02, 'black', '', '10px', true, '5px'); 
-        BLBUI.setLayout(1, 'v01', arr); 
-        BLBUI.tool.setTagValue('v001', 'title'); 
-        BLBUI.tool.setTagValue('v004', 'text'); 
-        BLBUI.tool.setTagValue('v002', 'input...'); 
-        BLBUI.tool.setTagValue('v005', 'input...'); 
-        var k100 = BLBUI.createElement('v100', '60px', '25px', BLBUI.color.red, 'white', '', '5px', false, '5px'); 
-        BLBUI.add('v03', k100); 
-        BLBUI.tool.setTagValue('v100', 'Send'); 
-        BLBUI.click('v100', function () { 
-        alert("title value:" + BLBUI.tool.getTagValue('v002') + " |text value:" + BLBUI.tool.getTagValue('v005')); 
-    }); 
+3.实例<br>
+点击链接下载查看代码效果：testUI<br>
+BLBUI.action(function () <br>
+{ <br>
+    //你的代码 <br>
+        var k00 = BLBUI.createElement('v00', '1000px', '700px', BLBUI.color.gray01, 'black', '', '10px', false, '5px'); <br>
+        BLBUI.setWindow(k00); //1.设置窗口 <br>
+        BLBUI.tool.setCenter('v00', true, false); <br>
+        //2二级视图 <br>
+        var k01 = BLBUI.createElement('v01', '95%', '30px', BLBUI.color.purple,'white', '', '30px', false, '5px'); <br>
+        BLBUI.add('v00',k01); <br>
+        var k02 = BLBUI.createElement('v02', '95%', '300px', BLBUI.color.yellow, 'white', '', '30px',true, '5px'); <br>
+        BLBUI.add('v00', k02); <br>
+        BLBUI.tool.setTagValue('v02','input...'); <br>
+        var k03 = BLBUI.createElement('v03', '95%', '30px', BLBUI.color.purple, 'white', '', '30px', false, '5px'); <br>
+        BLBUI.add('v00',k03); <br>
+        //3三级视图 <br>
+        var arr = new Array(); arr[0] = BLBUI.createElement('v001', '16%', '25px', BLBUI.color.blue, 'white', '', '10px', false, '5px'); <br>
+        arr[1] = BLBUI.createElement('v002', '26%', '25px', BLBUI.color.gray02, 'black', '', '10px', true, '5px'); <br>
+        arr[2] = BLBUI.createElement('v003', '2%', '25px', BLBUI.color.purple, 'white', '', '0px', false, '0px'); <br>
+        arr[3] = BLBUI.createElement('v004', '16%', '25px', BLBUI.color.blue, 'white', '', '10px', false, '5px'); <br>
+        arr[4] = BLBUI.createElement('v005', '26%', '25px', BLBUI.color.gray02, 'black', '', '10px', true, '5px'); <br>
+        BLBUI.setLayout(1, 'v01', arr); <br>
+        BLBUI.tool.setTagValue('v001', 'title'); <br>
+        BLBUI.tool.setTagValue('v004', 'text'); <br>
+        BLBUI.tool.setTagValue('v002', 'input...'); <br>
+        BLBUI.tool.setTagValue('v005', 'input...'); <br>
+        var k100 = BLBUI.createElement('v100', '60px', '25px', BLBUI.color.red, 'white', '', '5px', false, '5px'); <br>
+        BLBUI.add('v03', k100); <br>
+        BLBUI.tool.setTagValue('v100', 'Send'); <br>
+        BLBUI.click('v100', function () { <br>
+        alert("title value:" + BLBUI.tool.getTagValue('v002') + " |text value:" + BLBUI.tool.getTagValue('v005')); <br>
+    }); <br>
 }); 
 
 
